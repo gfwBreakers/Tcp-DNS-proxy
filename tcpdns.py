@@ -185,10 +185,9 @@ if __name__ == "__main__":
 
     print '>> Please wait program init....'
     print '>> Init finished!'
-    print '>> Now you can set dns server to 127.0.0.1'
+    print '>> Now you can set dns server to 0.0.0.0'
 
-    server = ThreadedUDPServer(('127.0.0.1', 53), ThreadedUDPRequestHandler)
+    server = ThreadedUDPServer(('0.0.0.0', 53), ThreadedUDPRequestHandler)
 
     server.serve_forever()
     server.shutdown()
-
